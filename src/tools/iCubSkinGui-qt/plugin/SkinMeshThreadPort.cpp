@@ -90,20 +90,26 @@ SkinMeshThreadPort::SkinMeshThreadPort(Searchable& config,int period) : Periodic
 
         std::string type(sensorConfig.get(0).asString());
 
-        if (type=="triangle"       ||
-            type=="fingertip"      ||
-            type=="fingertip2L"    ||
-            type=="fingertip2R"    ||
-            type=="triangle_10pad" ||
-            type=="quad16"         ||
-            type=="palmR"          ||
-            type=="palmL"          ||
-            type == "cer_sh_pdl"   ||
-            type == "cer_sh_pdr"   ||
-            type == "cer_sh_pp"    ||
-            type == "cer_sh_td"    ||
-            type == "cer_sh_tp")
-        {
+        if (type=="triangle"                  ||
+            type=="fingertip"                 ||
+            type=="fingertip2L"               ||
+            type=="fingertip2R"               ||
+            type=="triangle_10pad"            ||
+            type=="quad16"                    ||
+            type=="palmR"                     ||
+            type=="palmL"                     ||
+            type == "cer_sh_pdl"              ||
+            type == "cer_sh_pdr"              ||
+            type == "cer_sh_pp"               ||
+            type == "cer_sh_td"               ||
+            type == "cer_sh_tp"               ||
+            type == "CER_thumbFlexProximal_L" ||
+            type == "CER_thumbFlexDistal_L"   ||
+            type == "CER_indexFlexProximal_L" ||
+            type == "CER_indexFlexDistal_L"   ||
+            type == "CER_paddleFlexProximal_L"||
+            type == "CER_paddleFlexDistal_L")
+            {
             int    id=sensorConfig.get(1).asInt();
             double xc=sensorConfig.get(2).asDouble();
             double yc=sensorConfig.get(3).asDouble();
@@ -177,6 +183,30 @@ SkinMeshThreadPort::SkinMeshThreadPort(Searchable& config,int period) : Periodic
                     else if (type == "cer_sh_tp")
                     {
                         sensor[id] = new CER_SH_TP(xc, yc, th, gain, layoutNum, lrMirror);
+                    }
+                    else if (type == "CER_thumbFlexProximal_L")
+                    {
+                        sensor[id] = new CER_thumbFlexProximal_L(xc, yc, th, gain, layoutNum, lrMirror);
+                    }
+                    else if (type == "CER_thumbFlexDistal_L")
+                    {
+                        sensor[id] = new CER_thumbFlexDistal_L(xc, yc, th, gain, layoutNum, lrMirror);
+                    }
+                    else if (type == "CER_indexFlexProximal_L")
+                    {
+                        sensor[id] = new CER_indexFlexProximal_L(xc, yc, th, gain, layoutNum, lrMirror);
+                    }
+                    else if (type == "CER_indexFlexDistal_L")
+                    {
+                        sensor[id] = new CER_indexFlexDistal_L(xc, yc, th, gain, layoutNum, lrMirror);
+                    }
+                    else if (type == "CER_paddleFlexProximal_L")
+                    {
+                        sensor[id] = new CER_paddleFlexProximal_L(xc, yc, th, gain, layoutNum, lrMirror);
+                    }
+                    else if (type == "CER_paddleFlexDistal_L")
+                    {
+                        sensor[id] = new CER_paddleFlexDistal_L(xc, yc, th, gain, layoutNum, lrMirror);
                     }
 
                     sensor[id]->setCalibrationFlag(useCalibration);

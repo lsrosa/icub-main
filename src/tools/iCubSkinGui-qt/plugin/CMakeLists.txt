@@ -20,7 +20,10 @@ set(QtICubSkinGuiPlugin_SRCS Fingertip2Left.cpp
                              TouchSensor.cpp
                              Triangle_10pad.cpp
                              Triangle.cpp
-							 CER_SH_PDL.cpp)
+                             CER_SH_PDL.cpp
+                             CER_thumb_L.cpp
+                             CER_index_L.cpp
+                             CER_pad_L.cpp)
 
 set(QtICubSkinGuiPlugin_HDRS qticubskinguiplugin.h
                              qticubskinguiplugin_plugin.h
@@ -35,7 +38,10 @@ set(QtICubSkinGuiPlugin_HDRS qticubskinguiplugin.h
                              include/TouchSensor.h
                              include/Triangle_10pad.h
                              include/Triangle.h
-							 include/CER_SH_PDL.h)
+                             include/CER_SH_PDL.h
+                             include/CER_thumb_L.h
+                             include/CER_index_L.h
+                             include/CER_pad_L.h)
 
 source_group("Source Files" FILES ${QtICubSkinGuiPlugin_SRCS})
 source_group("Header Files" FILES ${QtICubSkinGuiPlugin_HDRS})

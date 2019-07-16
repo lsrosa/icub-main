@@ -31,6 +31,9 @@
 #include "include/Fingertip2Right.h"
 #include "include/Triangle_10pad.h"
 #include "include/CER_SH_PDL.h"
+#include "include/CER_thumb_L.h"
+#include "include/CER_index_L.h"
+#include "include/CER_pad_L.h"
 
 using namespace yarp::os;
 using namespace yarp::dev;
