@@ -157,7 +157,7 @@ public:
         dGain=gain;
         ilrMirror=lrMirror;
         ilayoutNum=layoutNum;
-        nVerts=8;
+        nVerts=7;
         nTaxels=48;
         m_RadiusOrig=1.8;
 
@@ -231,15 +231,32 @@ public:
            dY[i]=cy+SNT*x+CST*y;
        }
 
-       //dXv[0]=-2.5;  dYv[0]= 37.5;
-       dXv[0]=-2.5;  dYv[0]= 17.5;
-       dXv[1]= -2.5; dYv[1]= -7.5;
-       dXv[2]= 27.5; dYv[2]= -7.5;
-       dXv[3]=27.5;  dYv[3]= 32.5;
-       dXv[4]=22.5;  dYv[4]= 37.5;
-       dXv[5]=12.5;  dYv[5]= 37.5;
-       dXv[6]=7.5;   dYv[6]= 32.5;
-       dXv[7]=0.0;   dYv[7]=  22.5;
+
+//        dXv[0]=-2.5;  dYv[0]= 17.5;
+//        dXv[1]= -2.5; dYv[1]= -7.5;
+//        dXv[2]= 27.5; dYv[2]= -7.5;
+//        dXv[3]=27.5;  dYv[3]= 32.5;
+//        dXv[4]=22.5;  dYv[4]= 37.5;
+//        dXv[5]=12.5;  dYv[5]= 37.5;
+//        dXv[6]=7.5;   dYv[6]= 32.5;
+//        dXv[7]=0.0;   dYv[7]=  22.5;
+
+        dXv[0]=-2.5;  dYv[0]= 17.5;
+        dXv[1]= -2.5; dYv[1]= -7.5;
+        dXv[2]= 27.5; dYv[2]= -7.5;
+        dXv[3]=27.5;  dYv[3]= 37.5;
+        dXv[4]=12.5;  dYv[4]= 37.5;
+        dXv[5]=7.5;   dYv[5]= 32.5;
+        dXv[6]=0.0;   dYv[6]=  22.5;
+        //dXv[7]=0.0;   dYv[7]=  22.5;
+
+
+
+
+
+
+
+
 
 
 
